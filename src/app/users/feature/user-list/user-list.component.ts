@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { UserService } from '../../data-access/user/user.service';
 import { AsyncPipe, CommonModule } from '@angular/common';
 import { User } from '../../../shared/types/user';
-import { UserCardComponent } from '../../../shared/feature/user-card/user-card.component';
+import { UserCardComponent } from '../../ui/user-card/user-card.component';
 import { WeatherService } from '../../data-access/weather/weather.service';
 
 @Component({
@@ -19,6 +19,5 @@ export class UserListComponent implements OnInit {
 
   async ngOnInit() {
     this.users = await this.weatherService.getUsersWithWeather(await this.userService.fetchUsers());
-    console.log(this.users);
   }
 }

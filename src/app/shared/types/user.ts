@@ -2,7 +2,7 @@ export interface User {
   name: { [key: string]: string },
   gender: string,
   picture: { [key: string]: string },
-  location: { coordinates: { [key: string]: number } },
+  location: any,
   email: string,
-  weather?: object,
+  weather?: any,
 }
