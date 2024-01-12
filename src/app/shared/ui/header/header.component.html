@@ -1,6 +1,12 @@
 <header>
   <nav>
-    <a routeLink="/">Users</a>
-    <a routeLink="/saved">Saved</a>
+    <a
+      routerLink="/"
+      routerLinkActive="active"
+      [routerLinkActiveOptions]="{ exact: true }"
+    >
+      Users</a
+    >
+    <a routerLink="/saved" routerLinkActive="active">Saved</a>
   </nav>
 </header>
