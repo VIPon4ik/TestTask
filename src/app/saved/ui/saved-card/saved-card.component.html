@@ -1,0 +1,8 @@
+<app-card
+  [title]="user.name['first']"
+  [subtitle]="user.name['last']"
+  [content]="'Location: ' + user.location.state + ', ' + user.location.city"
+  [subcontent]="'Current temperature: ' + user.weather.temperature"
+  [picture]="user.picture['large']"
+  ></app-card>
+  

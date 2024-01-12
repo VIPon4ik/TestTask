@@ -1,1 +1,5 @@
-<p>saved-list works!</p>
+<app-list>
+  <div *ngFor="let user of savedUsers">
+    <app-saved-card [user]="user"></app-saved-card>
+  </div>
+</app-list>

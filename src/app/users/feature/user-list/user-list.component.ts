@@ -4,11 +4,12 @@ import { AsyncPipe, CommonModule } from '@angular/common';
 import { User } from '../../../shared/types/user';
 import { UserCardComponent } from '../../ui/user-card/user-card.component';
 import { WeatherService } from '../../data-access/weather/weather.service';
+import { ListComponent } from '../../../shared/ui/list/list.component';
 
 @Component({
   selector: 'app-user-list',
   standalone: true,
-  imports: [AsyncPipe, CommonModule, UserCardComponent],
+  imports: [AsyncPipe, CommonModule, UserCardComponent, ListComponent],
   templateUrl: './user-list.component.html',
   styleUrl: './user-list.component.css'
 })
