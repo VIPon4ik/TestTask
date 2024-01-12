@@ -1,4 +1,3 @@
-import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { User } from '../../../shared/types/user';
 
@@ -11,9 +10,9 @@ export class UserService {
 
   savedUsers: User[] = [];
 
-  constructor(private http: HttpClient) { }
+  constructor() { }
 
-  fetchUsers() {
-    return this.http.get(`${this.USERS_API}${this.USERS_PARAMS}`);
+  async fetchUsers() {
+    return await fetch(`${this.USERS_API}${this.USERS_PARAMS}`).then(res => res.json()).then(data => data.results);
   }
 }

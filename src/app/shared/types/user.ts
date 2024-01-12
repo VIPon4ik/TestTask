@@ -4,4 +4,5 @@ export interface User {
   picture: { [key: string]: string },
   location: any,
   email: string,
+  weather?: any,
 }

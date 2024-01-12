@@ -2,7 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { UserService } from '../../data-access/user/user.service';
 import { AsyncPipe, CommonModule } from '@angular/common';
 import { User } from '../../../shared/types/user';
-import { UserCardComponent } from '../../../shared/ui/user-card/user-card.component';
+import { UserCardComponent } from '../../../shared/feature/user-card/user-card.component';
+import { WeatherService } from '../../data-access/weather/weather.service';
 
 @Component({
   selector: 'app-user-list',
@@ -14,12 +15,10 @@ import { UserCardComponent } from '../../../shared/ui/user-card/user-card.compon
 export class UserListComponent implements OnInit {
   users:User[] = [];
 
-  constructor(private userService: UserService) {}
+  constructor(private userService: UserService, private weatherService: WeatherService) {}
 
-  ngOnInit(): void {
-    this.userService.fetchUsers().subscribe((users:any) => {
-      this.users = users.results;
-    })
-    console.log(this.users[0]);
+  async ngOnInit() {
+    this.users = await this.weatherService.getUsersWithWeather(await this.userService.fetchUsers());
+    console.log(this.users);
   }
 }

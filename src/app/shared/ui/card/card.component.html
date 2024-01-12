@@ -1,0 +1,20 @@
+<mat-card class="card">
+  <mat-card-header>
+    <mat-card-title
+      ><h2>{{title}}</h2></mat-card-title
+    >
+    <mat-card-subtitle
+      ><h3>
+        {{subtitle}}
+      </h3></mat-card-subtitle
+    >
+  </mat-card-header>
+  <img mat-card-md-image [src]="picture" class="card-image"/>
+  <mat-card-content>
+    <p>{{content}}</p>
+    <p>{{subcontent}}</p>
+  </mat-card-content>
+  <mat-card-actions >
+    <app-button *ngIf="withButton" mat-button [text]="buttonText" [type]="buttonType" [onClick]="buttonEvent"></app-button>
+  </mat-card-actions>
+</mat-card>
