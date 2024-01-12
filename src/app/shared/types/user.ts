@@ -1,5 +1,5 @@
 export interface User {
-  name: string,
+  name: { [key: string]: string },
   gender: string,
   picture: { [key: string]: string },
   location: any,

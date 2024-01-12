@@ -1,4 +1,6 @@
-<p>user-list works!</p>
-<div *ngFor="let user of users">
-  <p>{{user | json}}</p>
+
+<div class="user-list">
+  <div *ngFor="let user of users">
+    <app-user-card [user]="user"></app-user-card>
+  </div>
 </div>
