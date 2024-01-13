@@ -15,7 +15,7 @@ export class UserService {
   }
 
   saveUser = (user: User) => {
-    this.savedUsers.push(user);
+    this.savedUsers.unshift(user);
     localStorage.setItem('users', JSON.stringify(this.savedUsers));
   }
 
