@@ -4,5 +4,12 @@
   [content]="'Location: ' + user.location.state + ', ' + user.location.city"
   [subcontent]="'Current temperature: ' + user.weather.temperature"
   [picture]="user.picture['large']"
-  ></app-card>
+  >
+  <p>Location: {{ user.location.state }}, {{ user.location.city }}</p>
+  <p>
+    {{ "Current temperature: " + user.weather.temperature }}
+  </p>
+  <p>Gender: {{ user.gender }}</p>
+  <p>Email: {{ user.email }}</p>
+</app-card>
   

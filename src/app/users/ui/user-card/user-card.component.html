@@ -1,11 +1,15 @@
 <app-card
   [title]="user.name['first']"
   [subtitle]="user.name['last']"
-  [content]="'Location: ' + user.location.state + ', ' + user.location.city"
-  [subcontent]="'Current temperature: ' + user.weather.temperature"
   [picture]="user.picture['large']"
   [withButton]="true"
   [buttonText]="isUserIsSaved ? 'Remove' : 'Save'"
   [buttonEvent]="toggleSave"
-  ></app-card>
-  
+>
+  <p>Location: {{ user.location.state }}, {{ user.location.city }}</p>
+  <p>
+    {{ "Current temperature: " + user.weather.temperature }}
+  </p>
+  <p>Gender: {{ user.gender }}</p>
+  <p>Email: {{ user.email }}</p>
+</app-card>

@@ -11,8 +11,7 @@
   </mat-card-header>
   <img mat-card-md-image [src]="picture" class="card-image"/>
   <mat-card-content>
-    <p>{{content}}</p>
-    <p>{{subcontent}}</p>
+    <ng-content class="content"></ng-content>
   </mat-card-content>
   <mat-card-actions *ngIf="withButton">
     <app-button mat-button [text]="buttonText" [type]="buttonType" [onClick]="buttonEvent"></app-button>

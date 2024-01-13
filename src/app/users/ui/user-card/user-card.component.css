@@ -1,0 +1,7 @@
+p {
+  margin: 0;
+  color: rgb(237, 237, 237);
+  text-overflow: ellipsis;
+  overflow-x: hidden;
+}
+

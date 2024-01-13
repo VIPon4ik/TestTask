@@ -1,7 +1,7 @@
 .card {
   max-width: 280px;
-  min-height: 400px;
-  max-height: 400px;
+  min-height: 450px;
+  max-height: 450px;
   background-color: rgb(33, 33, 33);
   border-radius: 8px;
   display: flex;
@@ -11,8 +11,7 @@
 }
 
 h2,
-h3,
-p {
+h3 {
   color: rgb(237, 237, 237);
   margin: 0;
 }

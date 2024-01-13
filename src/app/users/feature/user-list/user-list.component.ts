@@ -20,5 +20,6 @@ export class UserListComponent implements OnInit {
 
   async ngOnInit() {
     this.users = await this.weatherService.getUsersWithWeather(await this.userService.fetchUsers());
+    console.log(this.users);
   }
 }
