@@ -14,7 +14,7 @@
     <p>{{content}}</p>
     <p>{{subcontent}}</p>
   </mat-card-content>
-  <mat-card-actions >
-    <app-button *ngIf="withButton" mat-button [text]="buttonText" [type]="buttonType" [onClick]="buttonEvent"></app-button>
+  <mat-card-actions *ngIf="withButton">
+    <app-button mat-button [text]="buttonText" [type]="buttonType" [onClick]="buttonEvent"></app-button>
   </mat-card-actions>
 </mat-card>
